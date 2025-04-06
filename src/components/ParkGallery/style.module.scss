@@ -1,0 +1,36 @@
+@use '../../styles/vars.scss' as vars;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(var(--top-padding) * 5);
+  padding: calc(var(--side-padding) * 2);
+
+  .blurbSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .mobileCarousel {
+    display: none;
+    width: 100%;
+
+    @media screen and (max-width: vars.$breakpoint-md) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .desktopGallery {
+    display: block;
+    width: 100%;
+
+    @media screen and (max-width: vars.$breakpoint-md) {
+      display: none;
+    }
+  }
+}

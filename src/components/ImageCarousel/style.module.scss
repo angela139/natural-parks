@@ -1,0 +1,50 @@
+.container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 296 / 447;
+  max-width: 400px;
+
+  .track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    height: 100%;
+  }
+
+  .slide {
+    min-width: 100%;
+    position: relative;
+    height: 100%;
+  }
+
+  .img {
+    object-fit: cover;
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  .left {
+    left: 8px;
+  }
+
+  .right {
+    right: 8px;
+  }
+}

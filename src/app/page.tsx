@@ -1,12 +1,12 @@
 import Hero from '@/components/Hero';
-import ImageGallery from '@/components/ImageGallery';
+import ParkGallery from '@/components/ParkGallery';
 import styles from './page.module.scss';
 
 export default function Home() {
   return (
     <main className={styles.container}>
       <Hero />
-      <ImageGallery />
+      <ParkGallery />
     </main>
   );
 }

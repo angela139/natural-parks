@@ -1,33 +1,72 @@
+'use client';
+
 import Image from 'next/image';
-import ParkInfo from '@/components/ParkInfo';
+import { motion, useInView, AnimatePresence } from 'framer-motion';
+import { useState, useRef } from 'react';
 import styles from './style.module.scss';
 
-const images = ['/assets/park1.png', '/assets/park2.png', '/assets/park3.png'];
+interface ImageGalleryProps {
+  images: string[];
+}
 
-const ImageGallery = () => {
+const ImageGallery = ({ images }: ImageGalleryProps) => {
+  const galleryRef = useRef(null);
+  const isInView = useInView(galleryRef, { once: false, margin: '0px 0px -100px 0px' });
+  const baseOffset = [0, 80, 160];
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   return (
-    <div className={styles.container}>
-      <div className={styles.blurbSection}>
-        <h2>
-          Sed volutpat, risus id ultricies blandit, arcu elit consectetur tellus, laoreet ornare
-          purus nulla in ipsum ac augue vitae turpis.
-        </h2>
-        <p>
-          Mauris vel nisl ante. Vivamus sagittis ullamcorper quam, sit amet tincidunt enim
-          sollicitudin ut. Vestibulum at elementum leo. Aliquam erat volutpat. Nullam magna orci,
-          accumsan at arcu lobortis, volutpat cursus nisl. Suspendisse metus purus, gravida vehicula
-          eros in, malesuada posuere magna.
-        </p>
-      </div>
-      <div className={styles.gallery}>
+    <>
+      <div className={styles.container} ref={galleryRef}>
         {images.map((src, index) => (
-          <div key={index} className={styles.imageWrapper}>
+          <motion.div
+            key={index}
+            className={styles.imageWrapper}
+            initial={{ opacity: 0, y: 100 }}
+            animate={isInView ? { opacity: 1, y: baseOffset[index] } : { opacity: 0, y: 100 }}
+            transition={{
+              type: 'spring',
+              stiffness: 50,
+              damping: 20,
+              mass: 1.1,
+              delay: index * 0.2,
+            }}
+            onClick={() => setSelectedImage(src)}
+          >
             <Image src={src} alt={`Park image ${index + 1}`} fill />
-          </div>
+          </motion.div>
         ))}
       </div>
-      <ParkInfo />
-    </div>
+
+      {/* Image Modal */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            className={styles.backdrop}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedImage(null)}
+          >
+            <motion.div
+              className={styles.modalImageWrapper}
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              onClick={e => e.stopPropagation()}
+            >
+              <Image
+                src={selectedImage}
+                alt="Expanded park image"
+                fill
+                className={styles.modalImage}
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
 

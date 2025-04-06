@@ -1,0 +1,35 @@
+.container {
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  .header {
+    width: 100%;
+    padding: 1rem;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+  }
+
+  .expandIcon {
+    transition: transform 0.3s ease;
+  }
+
+  .open {
+    transform: rotate(180deg);
+  }
+
+  .animatedContent {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition:
+      max-height 0.4s ease,
+      opacity 0.3s ease;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+}

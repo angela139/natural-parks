@@ -29,7 +29,13 @@ const Footer = () => {
       <span className={styles.title}>Made with ♡ by A.S. Graphic Studio</span>
       <div className={styles.navLinks}>
         {links.map(link => (
-          <Link href={link.href} className={styles.link} key={link.name}>
+          <Link
+            href={link.href}
+            className={styles.link}
+            key={link.name}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span className={styles.text}>{link.name}</span>
             <span className={styles.icon}>{link.icon}</span>
           </Link>
