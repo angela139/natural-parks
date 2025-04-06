@@ -1,0 +1,49 @@
+@use '../../styles/vars.scss' as vars;
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem;
+  background-color: vars.$black;
+
+  .title {
+    color: vars.$white;
+  }
+
+  .navLinks {
+    display: flex;
+    gap: 3rem;
+    color: vars.$white;
+
+    @media screen and (max-width: vars.$breakpoint-md) {
+      gap: 2rem;
+    }
+
+    .text {
+      display: inline;
+
+      @media screen and (max-width: vars.$breakpoint-md) {
+        display: none;
+      }
+    }
+
+    .icon {
+      display: none;
+
+      @media screen and (max-width: vars.$breakpoint-md) {
+        display: inline;
+
+        svg {
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: vars.$breakpoint-md) {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+  }
+}

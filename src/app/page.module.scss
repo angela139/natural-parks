@@ -1,0 +1,17 @@
+@use '../styles/vars.scss' as vars;
+
+.container {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: var(--top-padding) var(--side-padding);
+
+  .blurbSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    text-align: center;
+  }
+}
