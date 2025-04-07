@@ -47,7 +47,6 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setSelectedImage(null)}
           >
             <motion.div
               className={styles.modalImageWrapper}
@@ -55,7 +54,6 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              onClick={e => e.stopPropagation()}
             >
               <button
                 className={styles.closeButton}
