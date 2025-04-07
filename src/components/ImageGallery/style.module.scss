@@ -1,3 +1,5 @@
+@use '../../styles/vars.scss' as vars;
+
 .container {
   display: flex;
   justify-content: center;
@@ -24,15 +26,40 @@
   align-items: center;
   justify-content: center;
   z-index: 1000;
-}
 
-.modalImageWrapper {
-  position: relative;
-  width: 90vw;
-  max-width: 1000px;
-  aspect-ratio: 3 / 4;
-}
+  .modalImageWrapper {
+    position: relative;
+    width: 90vw;
+    max-width: 1000px;
+    aspect-ratio: 3 / 4;
+    display: flex;
+    flex-direction: column;
 
-.modalImage {
-  object-fit: contain;
+    .closeButton {
+      position: absolute;
+      top: 25%;
+      right: 0;
+      background: rgba(0, 0, 0, 0.6);
+      border: none;
+      padding: 0.4rem;
+      cursor: pointer;
+      z-index: 10;
+      color: vars.$white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.8);
+      }
+
+      svg {
+        font-size: 1.25rem;
+      }
+    }
+
+    .modalImage {
+      object-fit: contain;
+    }
+  }
 }

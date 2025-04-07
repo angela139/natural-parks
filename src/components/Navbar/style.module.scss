@@ -6,6 +6,12 @@
   align-items: center;
   padding: var(--top-padding) var(--side-padding);
 
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
   .navLinks {
     display: flex;
     gap: 4rem;

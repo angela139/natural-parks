@@ -25,7 +25,13 @@ const ImageCarousel = ({ images }: ImageCarouselProps) => {
       <div className={styles.track} style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
         {images.map((src, index) => (
           <div key={index} className={styles.slide}>
-            <Image src={src} alt={`Slide ${index + 1}`} fill className={styles.img} />
+            <Image
+              src={src}
+              alt={`Slide ${index + 1}`}
+              sizes={'1000px'}
+              fill
+              className={styles.img}
+            />
           </div>
         ))}
       </div>

@@ -1,3 +1,5 @@
+@use '../../styles/vars.scss' as vars;
+
 .container {
   overflow: hidden;
   transition: all 0.3s ease;
@@ -5,7 +7,8 @@
   .header {
     width: 100%;
     padding: 1rem;
-    background: #f5f5f5;
+    background: vars.$grey;
+    color: vars.$black;
     display: flex;
     justify-content: space-between;
     align-items: center;

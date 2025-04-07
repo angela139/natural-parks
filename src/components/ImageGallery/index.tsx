@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import CloseIcon from '@mui/icons-material/Close';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { useState, useRef } from 'react';
 import styles from './style.module.scss';
@@ -56,6 +57,13 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
               transition={{ duration: 0.3 }}
               onClick={e => e.stopPropagation()}
             >
+              <button
+                className={styles.closeButton}
+                onClick={() => setSelectedImage(null)}
+                aria-label="Close image"
+              >
+                <CloseIcon />
+              </button>
               <Image
                 src={selectedImage}
                 alt="Expanded park image"

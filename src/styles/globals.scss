@@ -78,6 +78,10 @@ h3 {
 p {
   font-size: 1.125rem;
   line-height: 161%;
+
+  @media screen and (max-width: vars.$breakpoint-md) {
+    font-size: 1rem;
+  }
 }
 
 span {

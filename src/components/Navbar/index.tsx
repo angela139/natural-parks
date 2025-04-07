@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import Logo from '../../../public/assets/logo.png';
 import { SwipeableDrawer } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
@@ -27,8 +29,9 @@ const Navbar = () => {
   };
   return (
     <div className={styles.container}>
-      <Link href="/">
-        <span>Lorem Ipsum</span>
+      <Link href="/" className={styles.logoContainer}>
+        <Image src={Logo} width={40} height={40} sizes={'100px'} alt="Logo" />
+        <span>National Parks</span>
       </Link>
       <div className={styles.navLinks}>
         {links.map(link => (

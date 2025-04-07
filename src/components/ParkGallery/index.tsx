@@ -11,14 +11,14 @@ const ParkGallery = () => {
     <div className={styles.container}>
       <div className={styles.blurbSection}>
         <h2>
-          Sed volutpat, risus id ultricies blandit, arcu elit consectetur tellus, laoreet ornare
-          purus nulla in ipsum ac augue vitae turpis.
+          From towering mountains to vast deserts, national parks across the U.S. showcase the
+          breathtaking beauty and diversity of the natural world.
         </h2>
         <p>
-          Mauris vel nisl ante. Vivamus sagittis ullamcorper quam, sit amet tincidunt enim
-          sollicitudin ut. Vestibulum at elementum leo. Aliquam erat volutpat. Nullam magna orci,
-          accumsan at arcu lobortis, volutpat cursus nisl. Suspendisse metus purus, gravida vehicula
-          eros in, malesuada posuere magna.
+          Spanning over 400 sites, these protected areas preserve scenic landscapes, rich wildlife
+          habitats, and deep cultural histories. Whether hiking through ancient forests, exploring
+          desert canyons, or witnessing geysers erupt in Yellowstone, national parks offer
+          unforgettable experiences that inspire wonder and conservation for generations to come.
         </p>
       </div>
       <div className={styles.mobileCarousel}>

@@ -2,22 +2,22 @@ const parks = [
   {
     name: 'Yosemite',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius eu metus et scelerisque. Nullam gravida eu elit at rutrum. Aliquam sit amet sollicitudin est. Suspendisse potenti. Donec porttitor tempor pulvinar. Sed congue elementum placerat. Maecenas nec rhoncus est.',
+      'Famed for its towering granite cliffs, cascading waterfalls, and ancient sequoia trees, Yosemite National Park offers breathtaking views and rugged adventures. Visitors come from around the world to experience the beauty of Yosemite Valley, Glacier Point, and the iconic Half Dome.',
   },
   {
     name: 'El Capitan',
     description:
-      'Mauris vel nisl ante. Vivamus sagittis ullamcorper quam, sit amet tincidunt enim sollicitudin ut. Vestibulum at elementum leo. Aliquam erat volutpat. Nullam magna orci, accumsan at arcu lobortis, volutpat cursus nisl. Suspendisse metus purus, gravida vehicula eros in, malesuada posuere magna.',
+      'Rising over 3,000 feet from the valley floor, El Capitan is a world-renowned climbing destination and one of Yosemite’s most striking landmarks. Its sheer granite face challenges climbers and captivates sightseers with its bold and majestic presence.',
   },
   {
     name: 'High Sierra',
     description:
-      'Nulla ac dolor nibh. Vestibulum feugiat convallis posuere. Pellentesque vestibulum eleifend turpis vel consequat. Cras tempor turpis in nunc finibus sollicitudin. Morbi malesuada sodales urna, quis pulvinar nunc interdum ultrices. Nullam id risus velit. Ut fringilla eleifend mollis. Phasellus in dui tellus. Nam euismod mattis quam porttitor ornare.',
+      'The High Sierra region features remote alpine wilderness, pristine lakes, and dramatic mountain passes. With sweeping vistas and diverse ecosystems, it’s a favorite for backpackers, wildlife watchers, and those seeking solitude in the heart of the Sierra Nevada.',
   },
   {
     name: 'Mojave',
     description:
-      'Integer tempor enim lacus, sit amet dapibus diam elementum et. Pellentesque congue libero id enim dignissim consequat. Fusce et sagittis magna, in feugiat felis. Sed volutpat, risus id ultricies blandit, arcu elit consectetur tellus, laoreet ornare purus nulla in ipsum. Praesent ac augue vitae turpis ullamcorper hendrerit eleifend in odio.',
+      'Spanning vast desert plains and rugged canyons, Mojave National Preserve is home to Joshua trees, sand dunes, and volcanic formations. It offers a serene and stark beauty, where visitors can explore desert trails and experience stunning night skies away from the crowds.',
   },
 ];
 
